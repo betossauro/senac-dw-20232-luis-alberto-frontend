@@ -1,0 +1,42 @@
+body {
+  font-family: Arial, sans-serif;
+  margin: 0;
+  padding: 0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  background-color: #f2f2f2;
+}
+
+.form-endereco {
+  background-color: #fff;
+  margin: 0 auto;
+  padding: 20px;
+  border-radius: 4px;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+  width: 400px;
+}
+
+.form-endereco h2 {
+  margin-top: 0;
+  margin-bottom: 20px;
+  text-align: center;
+}
+
+.form-item {
+  margin-bottom: 16px;
+  padding: 20px;
+}
+
+.form-item label {
+  display: block;
+  margin-bottom: 8px;
+}
+
+.form-item input {
+  height: 2rem;
+  width: 100%;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+}
