@@ -3,6 +3,11 @@ async function buscarCEP(cep) {
 
   var cep = document.getElementById("cep");
   var cepInformado = cep.value;
+  cepInformado = cepInformado.replace('-', '');
+
+  if (cepInformado.length < 8 || cepInformado.length > 9 ) {
+    alert('O CEP deve ser no padrão 00000000 ou 00000-000')
+  }
 
   fetch(`https://viacep.com.br/ws/${cepInformado}/json/`)
     .then((resultado) => resultado.json())
