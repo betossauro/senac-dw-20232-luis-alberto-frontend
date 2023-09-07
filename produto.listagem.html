@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Listagem de Produtos</title>
+    <link rel="stylesheet" href="./css/style.css" />
+  </head>
+  <body>
+    <header class="header">
+      <h1 class="titulo">Consulta de Produtos</h1>
+    </header>
+    <main class="principal">
+      <!-- <form id="form-filtro">
+        <input
+          type="text"
+          name="produto"
+          id="produto"
+          placeholder="Produto"
+        />
+        <label for="produto">Filtrar por nome do produto</label>
+        <input
+          type="text"
+          name="fabricante"
+          id="fabricante"
+          placeholder="Fabricante"
+        />
+        <label for="fabricante">Filtrar por nome do produto</label>
+        <input
+          type="text"
+          name="cnpj"
+          id="cnpj"
+          placeholder="CNPJ"
+        />
+        <label for="cnpj">Filtrar por CNPJ do fabricante</label>
+        <input
+          type="number"
+          name="pesomin"
+          id="pesomin"
+          placeholder="0.0Kg"
+        />
+        <label for="pesomin">Filtrar por Peso (min)</label>
+        <input
+          type="number"
+          name="pesomax"
+          id="pesomax"
+          placeholder="0.0Kg"
+        />
+        <label for="pesomax">Filtrar por Peso (max)</label>
+        <input
+          type="number"
+          name="valmin"
+          id="valmin"
+          placeholder="R$0.00"
+        />
+        <label for="valmin">Filtrar por Valor (min)</label>
+        <input
+          type="number"
+          name="valmax"
+          id="valmax"
+          placeholder="R$0.00"
+        />
+        <label for="valmax">Filtrar por Valor (max)</label>
+        <input
+          type="datetime"
+          name="datainicio"
+          id="datainicio"
+          placeholder="dd/mm/aaaa"
+        />
+        <label for="datainicio">Data de cadastro de: </label>
+        <input
+          type="datetime"
+          name="datafim"
+          id="datafim"
+          placeholder="dd/mm/aaaa"
+        />
+        <label for="datafim">Data de cadastro até: </label>
+      </form> -->
+      <section class="section__principal">
+        <table>
+          <thead>
+            <th>#</th>
+            <th>Nome</th>
+            <th>Fabricante</th>
+            <th>Valor (R$)</th>
+            <th>Peso (kg)</th>
+          </thead>
+          <tbody id="corpoTabela"></tbody>
+        </table>
+      </section>
+    </main>
+    <script src="./js/produto.listagem.js"></script>
+  </body>
+</html>
