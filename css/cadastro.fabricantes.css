@@ -1,0 +1,113 @@
+body {
+  margin: 0 auto;
+  font-family: Arial, Helvetica, sans-serif;
+  display: grid;
+  width: 800px;
+  grid-template-columns: 1fr;
+  justify-content: center;
+  align-items: center;
+  overflow-y: scroll;
+  background-color: #e9f8ff;
+}
+
+h1,
+h2,
+h3,
+h4,
+ul,
+p,
+dd,
+blockquote {
+  margin: 0px;
+}
+
+ul {
+  padding: 0px;
+  list-style: none;
+}
+
+a {
+  text-decoration: none;
+  color: inherit;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+.container {
+  max-width: 1200px;
+  box-sizing: border-box; /* faz com que o valor de padding não some no max-width */
+  padding-left: 20px;
+  padding-right: 20px;
+  margin-right: auto;
+  margin-left: auto;
+}
+
+.header-bg {
+  background: #011661;
+}
+
+/* estilo do header que envolve logo e botões de menu */
+.header {
+  display: flex; /* display de conteudo lado a lado */
+  flex-wrap: wrap;
+  gap: 20px;
+  justify-content: space-between; /* justifica espaço entre os elementos */
+  align-items: center;
+  padding-top: 20px;
+  padding-bottom: 20px;
+}
+
+/* HEADER */
+/* estilo do grupo de botões de menu */
+.header-menu {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 40px;
+  
+}
+
+.header-menu a {
+  display: inline-block;
+  padding: 16px 0px;
+  position: relative;
+  color: #f3f3f3;
+  font: 600 1.125rem/1.33 "Poppins", sans-serif;
+}
+
+.btn, .btn-form {
+  background: linear-gradient(#1f52fa, #0d39ca);
+  color: #f3f3f3;
+  border: none;
+  border-radius: 2px;
+  padding: 8px 32px;
+  text-transform: uppercase;
+  font: 600 1.125rem/1.33 "Poppins", sans-serif;
+  cursor: pointer;
+}
+
+.form-item label {
+  display: block;
+  margin-bottom: 8px;
+  font: 600 1.35rem/1.33 "Poppins", sans-serif;
+}
+
+.form-item input {
+  height: 3rem;
+  width: 100%;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  margin-bottom: 20px;
+  text-indent: 4px;
+  position: relative;
+  font: 400 1.125rem/1.33 "Poppins", sans-serif;
+}
+
+.cadastro {
+  margin-top: 32px;
+}
+
+.btn {
+  margin-bottom: 32px;
+}

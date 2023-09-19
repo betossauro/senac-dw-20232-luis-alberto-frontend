@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Listagem de Fornecedores</title>
+    <link rel="stylesheet" href="./css/listagem.fabricantes.css" />
+  </head>
+  <body>
+    <header class="header-bg">
+      <div class="header container">
+        <nav>
+          <ul class="header-menu">
+            <li>
+              <a href="./cadastro.fabricantes.html">Cadastro de Fornecedores</a>
+            </li>
+            <li>
+              <a href="./listagem.fabricantes.html">Lista de Fornecedores</a>
+            </li>
+          </ul>
+        </nav>
+      </div>
+    </header>
+    <div class="cabecalho">
+      <h1 class="subtitulo">Listagem de Fornecedores</h1>
+      <button class="btn" onclick="buscarTodosFabricantes()">
+        Pesquisar Todos
+      </button>
+      <button class="btn" onclick="limparFabricantes()">Limpar</button>
+    </div>
+    <section class="tabela">
+      <table>
+        <thead>
+          <th>#</th>
+          <th>Nome</th>
+          <th>CNPJ</th>
+          <th>CEP</th>
+          <th>Cidade</th>
+          <th>UF</th>
+        </thead>
+        <tbody id="corpoTabela"></tbody>
+      </table>
+    </section>
+    <script src="./js/listagem.fabricantes.js"></script>
+  </body>
+</html>

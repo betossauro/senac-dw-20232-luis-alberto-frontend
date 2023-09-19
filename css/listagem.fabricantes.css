@@ -1,0 +1,135 @@
+body {
+  margin: 0 auto;
+  font-family: Arial, Helvetica, sans-serif;
+  display: grid;
+  width: 800px;
+  grid-template-columns: 1fr;
+  justify-content: center;
+  align-items: center;
+  overflow-y: scroll;
+  background-color: #e9f8ff;
+}
+
+h1,
+h2,
+h3,
+h4,
+ul,
+p,
+dd,
+blockquote {
+  margin: 0px;
+}
+
+ul {
+  padding: 0px;
+  list-style: none;
+}
+
+a {
+  text-decoration: none;
+  color: inherit;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+.header-bg {
+  background: #011661;
+}
+
+/* estilo do header que envolve logo e botões de menu */
+.header {
+  display: flex; /* display de conteudo lado a lado */
+  flex-wrap: wrap;
+  gap: 20px;
+  justify-content: space-between; /* justifica espaço entre os elementos */
+  align-items: center;
+  padding-top: 20px;
+  padding-bottom: 20px;
+  padding-left: 20px;
+
+}
+
+/* HEADER */
+/* estilo do grupo de botões de menu */
+.header-menu {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 40px;
+}
+
+.header-menu a {
+  display: inline-block;
+  padding: 16px 0px;
+  position: relative;
+  color: #f3f3f3;
+  font: 600 1.125rem/1.33 "Poppins", sans-serif;
+}
+
+.subtitulo {
+  display: inline;
+  justify-self: center;
+}
+
+.btn {
+  background: linear-gradient(#1f52fa, #0d39ca);
+  color: #f3f3f3;
+  border: none;
+  border-radius: 2px;
+  padding: 8px 32px;
+  text-transform: uppercase;
+  font: 600 1.125rem/1.33 "Poppins", sans-serif;
+  cursor: pointer;
+}
+
+.cabecalho {
+  display: flex;
+  justify-content: space-between;
+  margin-top: 16px;
+}
+
+table {
+  width: 100%;
+  align-items: center;
+  border-collapse: collapse;
+}
+
+th {
+  border: 1px solid white;
+  text-align: start;
+  text-indent: 4px;
+  font-size: 1.125rem;
+  background: linear-gradient(#1f52fa, #0d39ca);
+  color: white;
+  padding: 16px;
+}
+
+td {
+  border: 1px solid white;
+  font-size: 1.1rem;
+  padding: 16px;
+}
+
+th:nth-child(1) {
+  text-align: center;
+}
+
+td:nth-child(1) {
+  text-align: center;
+}
+
+tr {
+  background-color: #c8d2f5;
+}
+
+tr:nth-child(even) {
+  background-color: #b4bfe9;
+}
+
+.tabela {
+  margin-top: 40px;
+  table-layout: auto;
+  width: 100%;
+}
