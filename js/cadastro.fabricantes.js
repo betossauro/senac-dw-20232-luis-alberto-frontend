@@ -42,6 +42,8 @@ document.getElementById("uf").addEventListener("input", statusBotaoCadastrar);
 statusBotaoCadastrar();
 
 async function cadastrar() {
+  const btnCadastro = document.querySelector(".btn-form");
+  btnCadastro.disabled = true;
   fetch("http://localhost:8080/api/fabricantes", {
     method: "POST",
     body: JSON.stringify({
@@ -62,7 +64,9 @@ async function cadastrar() {
       console.log(json);
       limparCampos();
     })
-    .catch((err) => console.log("Erro de solicitação", err));
+    .catch((err) => {console.log("Erro de solicitação", err)
+    btnCadastro.disabled = false;
+  });
 }
 
 function limparCampos() {
