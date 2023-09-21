@@ -87,6 +87,10 @@ a {
   cursor: pointer;
 }
 
+.btn-form:disabled {
+  background: rgb(216, 215, 215);
+}
+
 .form-item label {
   display: block;
   margin-bottom: 8px;
