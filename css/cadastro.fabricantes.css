@@ -89,6 +89,7 @@ a {
 
 .btn-form:disabled {
   background: rgb(216, 215, 215);
+  cursor: not-allowed;
 }
 
 .form-item label {
