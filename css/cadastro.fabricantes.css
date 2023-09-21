@@ -74,6 +74,23 @@ a {
   position: relative;
   color: #f3f3f3;
   font: 600 1.125rem/1.33 "Poppins", sans-serif;
+  transition: .3s;
+}
+
+.header-menu a:after {
+  content: "";
+  display: block;
+  height: 2px;
+  width: 0px;
+  background: #f3f3f3;
+  margin-top: 4px;
+  transition: 0.3s;
+  position: absolute;
+}
+
+.header-menu a:hover::after{
+  width: 100%;
+  background: #f3f3f3;
 }
 
 .btn, .btn-form {
