@@ -16,6 +16,7 @@ async function buscarCEP(cep) {
         mostrarTelaErro();
       } else {
         preencherCamposComJSON(json);
+        statusBotaoCadastrar();
       }
     })
     .catch((erro) => mostrarTelaErro());
