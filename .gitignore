@@ -1,15 +1,43 @@
-node_modules/.package-lock.json
-node_modules/ansi-regex/index.js
-node_modules/ansi-regex/license
-node_modules/ansi-regex/package.json
-node_modules/ansi-regex/readme.md
-node_modules/prompt-sync/index.js
-node_modules/prompt-sync/LICENSE
-node_modules/prompt-sync/package.json
-node_modules/prompt-sync/README.md
-node_modules/prompt-sync/test.js
-node_modules/strip-ansi/index.d.ts
-node_modules/strip-ansi/index.js
-node_modules/strip-ansi/license
-node_modules/strip-ansi/package.json
-node_modules/strip-ansi/readme.md
+# See http://help.github.com/ignore-files/ for more about ignoring files.
+
+# Compiled output
+/dist
+/tmp
+/out-tsc
+/bazel-out
+
+# Node
+/node_modules
+npm-debug.log
+yarn-error.log
+
+# IDEs and editors
+.idea/
+.project
+.classpath
+.c9/
+*.launch
+.settings/
+*.sublime-workspace
+
+# Visual Studio Code
+.vscode/*
+!.vscode/settings.json
+!.vscode/tasks.json
+!.vscode/launch.json
+!.vscode/extensions.json
+.history/*
+
+# Miscellaneous
+/.angular/cache
+.sass-cache/
+/connect.lock
+/coverage
+/libpeerconnection.log
+testem.log
+/typings
+
+# System files
+.DS_Store
+Thumbs.db
+package-lock.json
