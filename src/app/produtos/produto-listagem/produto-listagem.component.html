@@ -1,0 +1,28 @@
+<div class="table-responsive">
+  <table class="table table-sm">
+    <thead>
+      <tr>
+        <th scope="col">Nome</th>
+        <th scope="col">Fabricante</th>
+        <th scope="col">Valor</th>
+        <th scope="col">Peso</th>
+        <th scope="col">Data Cadastro</th>
+        <th>Ações</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr *ngFor="let p of produtos">
+        <td>{{ p.nome }}</td>
+        <td>{{ p.fabricante.nome }}</td>
+        <td>{{ p.valor }}</td>
+        <td>{{ p.peso }}</td>
+        <td>{{ p.dataCadastro | date:'dd/MM/yyyy' }}</td>
+        <td>
+          <button ngbTooltip="Editar" class="btn btn-xs btn-info mr-2" (click)="editar(p.id)"><i class="fa fa-edit"></i>
+
+          </button>
+        </td>
+      </tr>
+    </tbody>
+  </table>
+</div>
