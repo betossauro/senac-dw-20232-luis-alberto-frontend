@@ -15,7 +15,7 @@ export class ProdutoService {
   constructor(private httpClient: HttpClient) { }
 
   listarTodos(): Observable<Array<Produto>> {
-    return this.httpClient.get<Array<Produto>>(this.API);
+    return this.httpClient.get<Array<Produto>>(this.API + "/todos");
   }
 
   listarComSeletor(seletor: ProdutoSeletor){

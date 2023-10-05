@@ -1,6 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import { Produto } from 'src/app/shared/model/produto';
 import { ProdutoService } from 'src/app/shared/services/produto.service';
+import { ProdutoSeletor } from '../../shared/model/seletor/produto.seletor';
 
 @Component({
   selector: 'app-produto-listagem',
@@ -10,6 +11,7 @@ import { ProdutoService } from 'src/app/shared/services/produto.service';
 export class ProdutoListagemComponent implements OnInit {
 
   public produtos: Array<Produto> = new Array();
+  public seletor: ProdutoSeletor = new ProdutoSeletor();
 
   constructor(private produtoService: ProdutoService){
 
@@ -34,5 +36,9 @@ export class ProdutoListagemComponent implements OnInit {
   editar(id: number){
     //TODO: Implementar a edição do produto
     console.log('Editando o produto de id: ', id);
+  }
+
+  pesquisar() {
+
   }
 }
