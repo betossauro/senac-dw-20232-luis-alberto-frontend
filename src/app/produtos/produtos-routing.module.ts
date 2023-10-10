@@ -4,9 +4,8 @@ import { ProdutoListagemComponent } from './produto-listagem/produto-listagem.co
 import { ProdutoDetalheComponent } from './produto-detalhe/produto-detalhe.component';
 
 const routes: Routes = [
-  { path: '', component: ProdutoListagemComponent},
-  { path: 'produtos/listagem', component: ProdutoListagemComponent},
-  { path: 'produtos/detalhe', component: ProdutoDetalheComponent},
+  { path: 'listagem', component: ProdutoListagemComponent},
+  { path: 'detalhe', component: ProdutoDetalheComponent},
 ];
 
 @NgModule({

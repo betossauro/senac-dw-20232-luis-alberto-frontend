@@ -1,1 +1,45 @@
-<p>produto-detalhe works!</p>
+<br>
+<div class="container-fluid">
+  <form>
+    <div class="row">
+      <div class="form-group col-md-6">
+        <label for="nome">Nome</label>
+        <input class="form-control" name="nome" [(ngModel)]="produto.nome">
+      </div>
+      <div class="form-group col-md-6">
+        <label for="fabricante">Fabricante</label>
+        <select class="form-select" name="fabricante"
+          [ngModelOptions] ="{standalone: true}"
+          aria-label="Selecione um fabricante"
+          [compareWith]="comparedById"
+          [(ngModel)]="produto.fabricante">
+          <option *ngFor="let fabricante of fabricantes"
+          [ngValue]="fabricante">{{fabricante.nome}}</option>
+        </select>
+      </div>
+    </div>
+    <div class="row">
+      <div class="form-group col-md-6">
+        <label for="nome">Peso (Kg)</label>
+        <input class="form-control" type="number" name="peso" [(ngModel)]="produto.peso">
+      </div>
+      <div class="form-group col-md-6">
+        <label for="valor">Valor</label>
+        <div class="input-group mb-2">
+          <div class="input-group-prepend">
+            <div class="input-group-text">R$</div>
+          </div>
+          <input type="number" class="form-control" name="valor" placeholder="Valor de venda do produto" [(ngModel)]="produto.valor">
+        </div>
+      </div>
+    </div>
+    <div class="row">
+      <div class="form-group col-md-6">
+        <button type="submit" class="form-control btn btn-dark" (click)="cadastrarProduto()">Salvar</button>
+      </div>
+      <div class="form-group col-md-6">
+        <button type="submit" class="form-control btn btn-info" (click)="voltar()">Voltar</button>
+      </div>
+    </div>
+  </form>
+</div>

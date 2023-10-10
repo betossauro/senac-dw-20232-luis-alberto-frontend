@@ -1,6 +1,6 @@
 export class ProdutoSeletor {
   nome: string;
-  nomeFabricante: string;
+  fabricante: string;
   cnpjFabricante: string;
   valorMinimo: number;
   valorMaximo: number;

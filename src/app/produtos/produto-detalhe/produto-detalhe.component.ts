@@ -1,5 +1,9 @@
 import { Component, OnInit } from '@angular/core';
-import { ProdutoService } from 'src/app/shared/services/produto.service';
+import { Produto } from 'src/app/shared/model/produto';
+import { Fabricante } from 'src/app/shared/model/fabricante';
+import { ProdutoService } from './../../shared/services/produto.service';
+import { FabricanteService } from '../../shared/services/fabricante.service';
+import { Router } from '@angular/router';
 
 @Component({
   selector: 'app-produto-detalhe',
@@ -8,16 +12,35 @@ import { ProdutoService } from 'src/app/shared/services/produto.service';
 })
 export class ProdutoDetalheComponent implements OnInit {
 
-  constructor(private produtoService: ProdutoService){
+  public produto: Produto = new Produto();
+  public fabricantes: Fabricante[] = [];
+
+  constructor(private produtoService: ProdutoService,
+    private fabricanteService: FabricanteService,
+    private router: Router){
 
   }
 
   ngOnInit(): void {
+    this.fabricanteService.listarTodos().subscribe(
+      resultado => {
+        this.fabricantes = resultado;
+      },
+      erro  => {
+        console.log("Erro ao buscar produtos", erro);
+
+      }
+    )
     this.cadastrarProduto();
   }
 
-  //TODO
   cadastrarProduto() {
-    this.produtoService.salvar;
+    this.produtoService.salvar(this.produto);
   }
+
+  voltar() {
+    this.router.navigate(['app/produtos/listagem/']);
+  }
+
+  comparedById: (o1: any,o2: any) => boolean;
 }
