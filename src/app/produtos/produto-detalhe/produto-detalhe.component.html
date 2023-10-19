@@ -1,45 +1,108 @@
-<br>
+<br />
 <div class="container-fluid">
-  <form>
+  <form #ngForm="ngForm">
     <div class="row">
-      <div class="form-group col-md-6">
-        <label for="nome">Nome</label>
-        <input class="form-control" name="nome" [(ngModel)]="produto.nome">
+      <div class="form-group col-md-2">
+        <label>&nbsp;</label>
       </div>
-      <div class="form-group col-md-6">
-        <label for="fabricante">Fabricante</label>
-        <select class="form-select" name="fabricante"
-          [ngModelOptions] ="{standalone: true}"
+      <div class="form-group col-md-4">
+        <label for="nome">Nome</label><small style="color: red"> *</small>
+        <input
+          class="form-control"
+          minlength="3"
+          name="nome"
+          [(ngModel)]="produto.nome"
+          required
+        />
+      </div>
+      <div class="form-group col-md-4">
+        <label for="fabricante">Fabricante</label
+        ><small style="color: red"> *</small>
+        <select
+          class="form-select"
+          name="fabricante"
+          [ngModelOptions]="{ standalone: true }"
           aria-label="Selecione um fabricante"
-          [compareWith]="comparedById"
-          [(ngModel)]="produto.fabricante">
-          <option *ngFor="let fabricante of fabricantes"
-          [ngValue]="fabricante">{{fabricante.nome}}</option>
+          [compareWith]="compareById"
+          [(ngModel)]="produto.fabricante"
+          required
+        >
+          <option *ngFor="let fabricante of fabricantes" [ngValue]="fabricante">
+            {{ fabricante.nome }}
+          </option>
         </select>
       </div>
     </div>
-    <div class="row">
-      <div class="form-group col-md-6">
-        <label for="nome">Peso (Kg)</label>
-        <input class="form-control" type="number" name="peso" [(ngModel)]="produto.peso">
+    <div class="row mt-4">
+      <div class="form-group col-md-2">
+        <label>&nbsp;</label>
       </div>
-      <div class="form-group col-md-6">
-        <label for="valor">Valor</label>
+      <div class="form-group col-md-2">
+        <label for="nome">Peso (Kg)</label><small style="color: red"> *</small>
+        <input
+          class="form-control"
+          type="number"
+          name="peso"
+          min="0.1"
+          step="0.1"
+          [(ngModel)]="produto.peso"
+          required
+        />
+      </div>
+      <div class="form-group col-md-2">
+        <label for="dataCadastro">Data de cadastro</label
+        ><small style="color: red"> *</small>
+        <input
+          class="form-control"
+          type="date"
+          name="dataCadastro"
+          [(ngModel)]="produto.dataCadastro"
+          required
+        />
+      </div>
+      <div class="form-group col-md-4">
+        <label for="valor">Valor</label><small style="color: red"> *</small>
         <div class="input-group mb-2">
           <div class="input-group-prepend">
             <div class="input-group-text">R$</div>
           </div>
-          <input type="number" class="form-control" name="valor" placeholder="Valor de venda do produto" [(ngModel)]="produto.valor">
+          <input
+            type="number"
+            class="form-control"
+            name="valor"
+            placeholder="Valor de venda do produto"
+            [(ngModel)]="produto.valor"
+            required
+          />
         </div>
       </div>
     </div>
-    <div class="row">
-      <div class="form-group col-md-6">
-        <button type="submit" class="form-control btn btn-dark" (click)="cadastrarProduto()">Salvar</button>
-      </div>
-      <div class="form-group col-md-6">
-        <button type="submit" class="form-control btn btn-info" (click)="voltar()">Voltar</button>
-      </div>
-    </div>
   </form>
+  <br />
+  <div class="row">
+    <div class="form-group col-md-6">
+      <label>&nbsp;</label>
+    </div>
+    <div class="form-group col-md-2">
+      <label>&nbsp;</label>
+      <!-- Força um label vazio -->
+      <button
+        type="submit"
+        class="form-control btn btn-dark"
+        (click)="salvar(ngForm)"
+      >
+        Salvar
+      </button>
+    </div>
+    <div class="form-group col-md-2">
+      <label>&nbsp;</label>
+      <button
+        type="submit"
+        class="form-control btn btn-secondary"
+        (click)="voltar()"
+      >
+        Voltar
+      </button>
+    </div>
+  </div>
 </div>

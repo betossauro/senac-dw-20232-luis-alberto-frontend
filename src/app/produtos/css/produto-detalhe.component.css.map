@@ -1,0 +1,1 @@
+{"version":3,"sources":["../produto-detalhe/produto-detalhe.component.scss","produto-detalhe.component.css"],"names":[],"mappings":"AAAA;EACE,kBAAA;EACA,SAAA;EACA,WAAA;ACCF","file":"produto-detalhe.component.css","sourcesContent":[".icon {\n  position: absolute;\n  left: 46%;\n  top: 12.75%;\n}\n",".icon {\n  position: absolute;\n  left: 46%;\n  top: 12.75%;\n}"]}

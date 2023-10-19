@@ -25,4 +25,16 @@ export class ProdutoService {
   salvar(produto: Produto): Observable<Produto> {
     return this.httpClient.post<Produto>(this.API, produto);
   }
+
+  atualizar(produto: Produto): Observable<Produto> {
+    return this.httpClient.put<Produto>(this.API, produto);
+  }
+
+  pesquisarPorId(id: number): Observable<Produto> {
+    return this.httpClient.get<Produto>(this.API + '/' + id);
+  }
+
+  excluir(id: number): Observable<Produto> {
+    return this.httpClient.delete<Produto>(this.API + '/' + id);
+  }
 }

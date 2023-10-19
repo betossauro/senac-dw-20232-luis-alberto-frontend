@@ -9,7 +9,7 @@
         <div class="card-body card-info">
           <form>
             <div class="row align-items-end">
-              <div class="form-group col-md-4 col-lg-4">
+              <div class="form-group col-md-6">
                 <label for="nome">Nome</label>
                 <input
                   class="form-control"
@@ -18,7 +18,7 @@
                   [(ngModel)]="seletor.nome"
                 />
               </div>
-              <div class="form-group col-md-4 col-lg-4">
+              <div class="form-group col-md-6">
                 <label for="nome">Fabricante</label>
                 <input
                   class="form-control"
@@ -28,15 +28,26 @@
                 />
               </div>
               <br />
-              <div class="form-group col-md-3 col-lg-3">
-                <label>&nbsp;</label>
-                <button
-                  type="submit"
-                  class="form-control btn btn-primary"
-                  (click)="pesquisar()"
-                >
-                  Pesquisar
-                </button>
+              <div class="row mt-4">
+                <div class="form-group col-md-6"></div>
+                <div class="form-group col-md-3">
+                  <button
+                    type="submit"
+                    class="form-control btn btn-dark"
+                    (click)="pesquisar()"
+                  >
+                    Pesquisar
+                  </button>
+                </div>
+                <div class="form-group col-md-3">
+                  <button
+                    type="submit"
+                    class="form-control btn btn-secondary"
+                    (click)="limpar()"
+                  >
+                    Limpar
+                  </button>
+                </div>
               </div>
             </div>
           </form>
@@ -44,7 +55,7 @@
       </div>
     </div>
   </div>
-  <br>
+  <br />
   <div class="row">
     <div class="col-sm-12">
       <div class="card">
@@ -58,29 +69,38 @@
                 <tr>
                   <th scope="col">Nome</th>
                   <th scope="col">Fabricante</th>
-                  <th scope="col">Valor</th>
-                  <th scope="col">Peso</th>
-                  <th scope="col">Data Cadastro</th>
-                  <th>Ações</th>
+                  <th class="align-center" scope="col">Valor</th>
+                  <th class="align-center" scope="col">Peso</th>
+                  <th class="align-center" scope="col">Data Cadastro</th>
+                  <th class="align-center">Ações</th>
                 </tr>
               </thead>
               <tbody>
                 <tr *ngFor="let p of produtos">
                   <td class="align-middle">{{ p.nome }}</td>
                   <td class="align-middle">{{ p.fabricante.nome }}</td>
-                  <td class="align-middle">{{ p.valor }}</td>
-                  <td class="align-middle">{{ p.peso }}</td>
-                  <td class="align-middle">
+                  <td class="align-middle align-center">R${{ p.valor }}</td>
+                  <td class="align-middle align-center">{{ p.peso }}Kg</td>
+                  <td class="align-middle align-center">
                     {{ p.dataCadastro | date : "dd/MM/yyyy" }}
                   </td>
-                  <td class="align-middle">
-                    <button
-                      ngbTooltip="Editar"
-                      class="btn btn-xs btn-dark mr-2"
-                      (click)="editar(p.id)"
-                    >
-                      <i class="fa fa-edit"></i>Editar
-                    </button>
+                  <td class="align-middle align-center">
+                    <div class="space">
+                      <button
+                        ngbTooltip="Editar"
+                        class="btn btn-xs btn-warning mr-2"
+                        (click)="editar(p.id)"
+                      >
+                        <i class="bi bi-pencil-fill"></i>
+                      </button>
+                      <button
+                        ngbTooltip="Editar"
+                        class="btn btn-xs btn-danger mr-2"
+                        (click)="excluir(p.id)"
+                      >
+                        <i class="bi bi-trash-fill"></i>
+                      </button>
+                    </div>
                   </td>
                 </tr>
               </tbody>

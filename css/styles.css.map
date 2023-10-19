@@ -1,0 +1,1 @@
+{"version":3,"sources":["../src/styles.scss"],"names":[],"mappings":"AAAA,8EAAA;AACQ,mDAAA","file":"styles.css","sourcesContent":["/* You can add global styles to this file, and also import other style files */\n@import '~bootstrap-icons/font/bootstrap-icons.css';\n"]}
